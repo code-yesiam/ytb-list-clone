@@ -1,3 +1,32 @@
 body {
     background-color: rgb(20, 20, 20);
 }
+
+.youtube {
+    display: grid;
+    grid: 
+    "menu menu menu menu menu" 50px
+    "sidebar videos videos videos videos" 1fr 
+    / 1fr 4fr;
+    color: aliceblue;
+}
+
+.youtube > * {
+    color: aliceblue;
+}
+
+.menu {
+    grid-area: menu;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    display: block;
+}
+
+.videos {
+    grid-area: videos;
+
+}
