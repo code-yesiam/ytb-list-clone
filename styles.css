@@ -1,7 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
 body {
     background-color: rgb(20, 20, 20);
 }
 
+.youtube > * {
+    color: aliceblue;
+}
+
+/*GRID STYLING*/
 .youtube {
     display: grid;
     grid: 
@@ -11,22 +22,152 @@ body {
     color: aliceblue;
 }
 
-.youtube > * {
-    color: aliceblue;
-}
-
 .menu {
     grid-area: menu;
     display: flex;
     justify-content: space-between;
+    position: sticky;
+    top: 0;
 }
 
 .sidebar {
     grid-area: sidebar;
-    display: block;
+    display: grid;
 }
 
 .videos {
     grid-area: videos;
+    display: grid;
+    grid: 
+    "defaultvideo defaultvideo defaultvideo defaultvideo defaultvideo" 1fr
+    "shortsvideo shortsvideo shortsvideo shortsvideo shortsvideo" 2fr
+    / 1fr
+    ;
+}
 
+/*MENU CONFIG*/
+.hamburger-button {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+}
+
+.hamburger-button:hover {
+    background-color: gray;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.search {
+    padding-top: 2px;
+}
+
+.search-bar {
+    background-color: transparent;
+    border: 2px solid #a1a1a1;
+    border-radius: 30px 0 0 30px;
+    padding-left: 12px;
+    width: 50vh;
+    height: 30px;
+    color: aliceblue;
+}
+
+.search-button {
+    background-color: #a1a1a1;
+    border: 2px solid #a1a1a1;
+    border-radius: 0 30px 30px 0;
+    position: absolute;
+    height: 36px;
+}
+
+.search-button:hover {
+    cursor: pointer;
+    background-color: #aaaaaa;
+    border: 2px solid #aaaaaa;
+}
+
+.profile {
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+/*SIDEBAR CONFIG*/
+
+.youtube-sections {
+    list-style: none;
+}
+
+.youtube-sections li {
+    width: 70%;
+    height: 40px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.youtube-sections li:hover {
+    background-color: #aaaaaa;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.youtube-sections a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.sidebar h3 {
+    padding-left: 12px;
+}
+
+.sidebar p {
+    padding-left: 16px;
+}
+
+.subscribed-channels {
+    display: inline-block;
+}
+
+.subscribed-channels img {
+    width: 30px;
+    border-radius: 10px;
+    padding-right: 12px;
+}
+
+.subscribed-channels p {
+    display: inline;
+}
+
+/* VIDEOS CONFIG */
+
+.item-videos_default {
+    grid-area: defaultvideo;
+    display: grid;
+    grid:
+    "video video video video video" 400px
+    / repeat(5, 200px);
+}
+
+.video {
+    grid-area: video;
+    background-color: blue;
+}
+
+.image-video {
+    width: 250px;
+    height: 160px;
+    padding: 8px;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.channel-profile {
+    width: 32px;
+    display: block;
+    height: 32px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+
+.item-videos_shorts {
+    grid-area: shortsvideo;
 }
