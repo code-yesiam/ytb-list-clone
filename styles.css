@@ -113,7 +113,9 @@ body {
     width: 70%;
     height: 40px;
     text-align: left;
-    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
 }
 
 .youtube-sections li:hover {
@@ -146,11 +148,12 @@ body {
 .subscribed-channels img {
     width: 30px;
     border-radius: 10px;
-    padding-right: 12px;
+    margin: 12px;
 }
 
 .subscribed-channels p {
     display: inline;
+    vertical-align: 20px;
 }
 
 /* VIDEOS CONFIG */
