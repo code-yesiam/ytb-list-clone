@@ -34,11 +34,11 @@ body {
     grid-area: sidebar;
     display: grid;
     grid:
-    "main"
+    "main" 150px
     "sideline" 10px
-    "tools" 
+    "tools" 250px
     "subscriptions" 60px
-    "channels" 3fr / 1fr
+    "channels" 50px/ 1fr
 }
 
 .videos {
@@ -61,11 +61,12 @@ body {
 .hamburger-button {
     background-color: transparent;
     border: none;
+    padding: 12px;
 }
 
 .hamburger-button:hover {
     background-color: gray;
-    border-radius: 30px;
+    border-radius: 36px;
     cursor: pointer;
 }
 .search {
@@ -142,12 +143,18 @@ body {
 }
 
 .subscribed-channels {
-    display: inline-block;
+    display: block;
+}
+
+.subscribed-channels:hover {
+    background-color: #a1a1a1;
+    cursor: pointer;
+    border-radius: 12px;
 }
 
 .subscribed-channels img {
     width: 30px;
-    border-radius: 10px;
+    border-radius: 15px;
     margin: 12px;
 }
 
@@ -163,7 +170,7 @@ body {
     display: grid;
     grid:
     300px
-    / 1fr 1fr 1fr 1fr;
+    / 1fr 1fr 1fr 1fr 1fr;
 }
 
 .video {
@@ -215,4 +222,11 @@ body {
     grid-area: shortsvideo;
     grid: 
     "shorts" 600px/ 1fr 1fr 1fr 1fr 1fr;
+}
+
+.image-video_shorts {
+    height: 400px;
+    width: 200px;
+    border-radius: 15px;
+    object-fit: cover;
 }
